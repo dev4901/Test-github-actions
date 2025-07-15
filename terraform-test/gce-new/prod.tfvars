@@ -7,7 +7,7 @@ environment  = "prod"
 
 # Instance configuration
 machine_type = "e2-small"
-image_family = "ubuntu-2204-lts"
+image_family = "ubuntu-2004-lts"
 disk_size    = 50
 disk_type    = "pd-standard"
 
