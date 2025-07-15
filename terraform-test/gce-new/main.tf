@@ -17,7 +17,7 @@ provider "google" {
 
 # Create a GCE instance
 resource "google_compute_instance" "web_server" {
-  name         = "${var.environment}-web-server-new-atlantis"
+  name         = "${var.environment}-server-new-atlantis"
   machine_type = var.machine_type
   zone         = var.zone
 
