@@ -65,7 +65,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./gce/
+        working-directory: terraform-test/gce/
 
     steps:
     # Checkout the repository to the GitHub Actions runner
