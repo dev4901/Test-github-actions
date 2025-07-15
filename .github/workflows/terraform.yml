@@ -65,6 +65,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working_directory: ./gce/
 
     steps:
     # Checkout the repository to the GitHub Actions runner
