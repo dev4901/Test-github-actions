@@ -2,7 +2,7 @@
 project_id   = "cellular-motif-457805-t1"
 project_name = "my-first-project"
 region       = "us-central1"
-zone         = "us-central1-a"
+zone         = "us-central1-c"
 environment  = "prod"
 
 # Instance configuration
