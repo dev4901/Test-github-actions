@@ -32,6 +32,18 @@ variable "environment" {
   }
 }
 
+variable "vpc" {
+  type = string
+}
+
+variable "subnet" {
+  type = string
+}
+
+variable "service_account" {
+  type = string
+}
+
 variable "machine_type" {
   description = "The machine type for the GCE instance"
   type        = string
@@ -61,45 +73,15 @@ variable "disk_type" {
   }
 }
 
-variable "subnet_cidr" {
-  description = "CIDR block for the subnet"
-  type        = string
-  default     = "10.0.0.0/24"
-}
-
-variable "allowed_cidr_blocks" {
-  description = "List of CIDR blocks allowed to access the instance"
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
-}
-
-variable "ssh_user" {
-  description = "SSH username"
-  type        = string
-  default     = "ubuntu"
-}
-
-variable "ssh_public_key_path" {
-  description = "Path to the SSH public key file"
-  type        = string
-  default     = "~/.ssh/id_rsa.pub"
-}
-
 variable "startup_script" {
   description = "Startup script to run on instance boot"
   type        = string
-  default     = <<-EOF
-    #!/bin/bash
-    apt-get update
-    apt-get install -y nginx
-    systemctl start nginx
-    systemctl enable nginx
-    echo "<h1>Hello from Terraform!</h1>" > /var/www/html/index.html
-  EOF
-}
-
-variable "create_static_ip" {
-  description = "Whether to create a static IP for the instance"
-  type        = bool
-  default     = false
+#   default     = <<-EOF
+#   #!/bin/bash
+#   apt-get update
+#   apt-get install -y nginx
+#   systemctl start nginx
+#   systemctl enable nginx
+#   echo "<h1>Hello from Terraform!</h1>" > /var/www/html/index.html
+# EOF
 }
