@@ -1,7 +1,7 @@
 version: 3
 projects:
 - name: poc
-  dir: .
+  dir: ./terraform-test/gce-new
   workspace: prod
   workflow: prod
   autoplan:
