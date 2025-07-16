@@ -7,7 +7,7 @@ environment  = "prod"
 
 # Instance configuration
 machine_type = "e2-small"
-image_family = "ubuntu-2004-lts"
+image_family = "debian-cloud/debian-12"
 disk_size    = 50
 disk_type    = "pd-standard"
 
