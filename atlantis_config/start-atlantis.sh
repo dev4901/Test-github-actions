@@ -9,4 +9,5 @@ atlantis server \
   --repo-allowlist="$REPO_ALLOWLIST" \
   --port="$PORT" \
   --atlantis-url="$ATLANTIS_URL" \
-  --gh-webhook-secret="$WEBHOOK_SECRET"
+  --gh-webhook-secret="$WEBHOOK_SECRET" \
+  --write-git-creds
