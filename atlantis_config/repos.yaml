@@ -1,0 +1,22 @@
+repos:
+  - id: /.*/
+    allowed_overrides: [workflow]
+
+workflows:
+  prod:
+    plan:
+      steps:
+      - env:
+          name: TF_WORKSPACE
+          command: echo $WORKSPACE
+      - init
+      - plan:
+          extra_args: ["-var-file=prod.tfvars"]
+
+    apply:
+      steps:
+      - env:
+          name: TF_WORKSPACE
+          command: echo $WORKSPACE
+      - apply:
+          extra_args: ["-var-file=prod.tfvars"]
