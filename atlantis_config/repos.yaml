@@ -18,5 +18,8 @@ workflows:
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
+      - env:
+          name: GOOGLE_APPLICATION_CREDENTIALS
+          command: echo "/etc/atlantis/google_creds.json"
       - apply:
           extra_args: ["-var-file=prod.tfvars"]
