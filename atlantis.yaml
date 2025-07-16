@@ -1,0 +1,8 @@
+version: 3
+projects:
+- name: prod
+  dir: ./terraform-test/gce-new
+  workspace: prod
+  workflow: prod
+  autoplan:
+    enabled: true
