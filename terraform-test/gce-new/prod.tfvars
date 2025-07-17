@@ -2,11 +2,11 @@
 project_id   = "cellular-motif-457805-t1"
 project_name = "my-first-project"
 region       = "us-central1"
-zone         = "us-central1-c"
+zone         = "us-central1-b"
 environment  = "prod"
 
 # Instance configuration
-machine_type = "e2-small"
+machine_type = "e2-medium"
 image_family = "debian-cloud/debian-12"
 disk_size    = 50
 disk_type    = "pd-standard"
