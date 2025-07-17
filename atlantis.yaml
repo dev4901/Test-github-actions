@@ -14,6 +14,7 @@ projects:
   dir: ./terraform-test/gce
   workspace: gqa
   workflow: prod
+  apply_requirements: [mergeable]
   autoplan:
     when_modified: ["*.tf", "*.tfvars"]
     enabled: true
