@@ -2,18 +2,18 @@
 project_id   = "cellular-motif-457805-t1"
 project_name = "my-first-project"
 region       = "us-central1"
-zone         = "us-central1-a"
-environment  = "prod"
+zone         = "us-central1-b"
+environment  = "gqa"
 
 # Instance configuration
-machine_type = "e2-small"
+machine_type = "e2-medium"
 image_family = "ubuntu-2204-lts"
 disk_size    = 50
 disk_type    = "pd-standard"
 
 # Network configuration
-vpc = "vpc-main"
-subnet = "subnet-iowa"
+vpc             = "vpc-main"
+subnet          = "subnet-iowa"
 service_account = "gce-custom-sa@cellular-motif-457805-t1.iam.gserviceaccount.com"
 # Production startup script
 startup_script = <<EOF
