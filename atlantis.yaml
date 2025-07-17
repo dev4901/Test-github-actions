@@ -1,14 +1,19 @@
 version: 3
+parallel_apply: false
+
 projects:
 - name: prod
   dir: ./terraform-test/gce-new
   workspace: prod
   workflow: prod
+  apply_requirements: [mergeable]
   autoplan:
+    when_modified: ["*.tf", "*.tfvars"]
     enabled: true
 - name: gqa
   dir: ./terraform-test/gce
   workspace: gqa
   workflow: prod
   autoplan:
+    when_modified: ["*.tf", "*.tfvars"]
     enabled: true

@@ -1,7 +1,7 @@
 repos:
   - id: /.*/
-    allowed_overrides: [workflow]
-
+    allowed_overrides: [workflow, apply_requirements]
+    
 workflows:
   prod:
     plan:

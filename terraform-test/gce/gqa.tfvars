@@ -3,10 +3,10 @@ project_id   = "cellular-motif-457805-t1"
 project_name = "my-first-project"
 region       = "us-central1"
 zone         = "us-central1-b"
-environment  = "gqa"
+environment  = "dev"
 
 # Instance configuration
-machine_type = "e2-medium"
+machine_type = "e2-micro"
 image_family = "ubuntu-2204-lts"
 disk_size    = 50
 disk_type    = "pd-standard"
