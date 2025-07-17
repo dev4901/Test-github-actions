@@ -12,6 +12,7 @@ workflows:
           command: echo $WORKSPACE
       - run: terraform validate
       - init
+      - run: terraform validate
       - plan:
           extra_args: ["-var-file=$WORKSPACE.tfvars"]
 
