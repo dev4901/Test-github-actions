@@ -6,3 +6,9 @@ projects:
   workflow: prod
   autoplan:
     enabled: true
+- name: gqa
+  dir: ./terraform-test/gce
+  workspace: gqa
+  workflow: prod
+  autoplan:
+    enabled: true

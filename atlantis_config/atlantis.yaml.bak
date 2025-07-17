@@ -1,0 +1,15 @@
+# version: 3
+# projects:
+# - name: poc-new
+#   dir: ./terraform-test/gce-new/
+#   workspace: prod
+#   workflow: prod
+#   autoplan:
+#     enabled: true
+
+# - name: poc-old
+#   dir: ./terraform-test/gce/
+#   workspace: gqa
+#   workflow: gqa
+#   autoplan:
+#     enabled: true

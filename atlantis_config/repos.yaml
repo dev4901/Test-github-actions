@@ -6,15 +6,18 @@ workflows:
   prod:
     plan:
       steps:
+      - run: echo "Planning $WORKSPACE workflow"
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
+      - run: terraform validate
       - init
       - plan:
-          extra_args: ["-var-file=prod.tfvars"]
+          extra_args: ["-var-file=$WORKSPACE.tfvars"]
 
     apply:
       steps:
+      - run: echo "Applying the $WORKSPACE workflow"
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
@@ -22,4 +25,27 @@ workflows:
           name: GOOGLE_APPLICATION_CREDENTIALS
           command: echo "/etc/atlantis/google_creds.json"
       - apply:
-          extra_args: ["-var-file=prod.tfvars"]
+          extra_args: ["-var-file=$WORKSPACE.tfvars"]
+          
+  # gqa:
+  #   plan:
+  #     steps:
+  #     - run: echo "Plannign GQA WOrkflow"
+  #     - env:
+  #         name: TF_WORKSPACE
+  #         command: echo $WORKSPACE
+  #     - run: terraform validate
+  #     - init
+  #     - plan:
+  #         extra_args: ["-var-file=gqa.tfvars"]
+
+  #   apply:
+  #     steps:
+  #     - env:
+  #         name: TF_WORKSPACE
+  #         command: echo $WORKSPACE
+  #     - env:
+  #         name: GOOGLE_APPLICATION_CREDENTIALS
+  #         command: echo "/etc/atlantis/google_creds.json"
+  #     - apply:
+  #         extra_args: ["-var-file=gqa.tfvars"]
