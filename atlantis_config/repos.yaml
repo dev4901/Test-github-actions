@@ -1,6 +1,7 @@
 repos:
   - id: /.*/
     allowed_overrides: [workflow]
+    when_modified: ["*.tf", "*.tfvars"]
 
 workflows:
   prod:
