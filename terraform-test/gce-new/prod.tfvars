@@ -6,9 +6,9 @@ zone         = "us-central1-b"
 environment  = "prod"
 
 # Instance configuration
-machine_type = "e2-medium"
+machine_type = "e2-micro"
 image_family = "debian-cloud/debian-12"
-disk_size    = 50
+disk_size    = 30
 disk_type    = "pd-standard"
 
 # Network configuration
