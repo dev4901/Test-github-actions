@@ -6,7 +6,7 @@
 project_id   = "searce-playground-v2"
 project_name = "searce-playground-02012024"
 region       = "asia-south1"
-zone         = "asia-south11-b"
+zone         = "asia-south1-b"
 environment  = "prod"
 
 # Instance configuration
