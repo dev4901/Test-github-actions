@@ -6,9 +6,9 @@ zone         = "us-central1-b"
 environment  = "dev"
 
 # Instance configuration
-machine_type = "e2-micro"
+machine_type = "e2-medium"
 image_family = "ubuntu-2204-lts"
-disk_size    = 50
+disk_size    = 30
 disk_type    = "pd-standard"
 
 # Network configuration
