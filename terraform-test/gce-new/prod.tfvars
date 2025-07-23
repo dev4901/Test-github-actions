@@ -1,8 +1,12 @@
 # prod.tfvars
-project_id   = "cellular-motif-457805-t1"
-project_name = "my-first-project"
-region       = "us-central1"
-zone         = "us-central1-b"
+#project_id   = "cellular-motif-457805-t1"
+#project_name = "my-first-project"
+#region       = "us-central1"
+#zone         = "us-central1-b"
+project_id   = "searce-playground-v2"
+project_name = "searce-playground-02012024"
+region       = "asia-south1"
+zone         = "asia-south11-b"
 environment  = "prod"
 
 # Instance configuration
@@ -13,8 +17,10 @@ disk_type    = "pd-standard"
 
 # Network configuration
 vpc = "vpc-main"
-subnet = "subnet-iowa"
-service_account = "gce-custom-sa@cellular-motif-457805-t1.iam.gserviceaccount.com"
+vpc = "pilot-training-2025-vpc"
+subnet = "devansh-subnet"
+#service_account = "gce-custom-sa@cellular-motif-457805-t1.iam.gserviceaccount.com"
+service_account = "pilot-training-2025-sa@searce-playground-v2.iam.gserviceaccount.com"
 # Production startup script
 startup_script = <<EOF
 #!/bin/bash
