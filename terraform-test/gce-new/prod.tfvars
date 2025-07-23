@@ -16,7 +16,7 @@ disk_size    = 30
 disk_type    = "pd-standard"
 
 # Network configuration
-vpc = "vpc-main"
+#vpc = "vpc-main"
 vpc = "pilot-training-2025-vpc"
 subnet = "devansh-subnet"
 #service_account = "gce-custom-sa@cellular-motif-457805-t1.iam.gserviceaccount.com"
