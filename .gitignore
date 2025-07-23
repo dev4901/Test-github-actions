@@ -1,3 +1,4 @@
 atlantis_key*
 .terraform*
 atlantis.var
+secret*

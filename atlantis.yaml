@@ -1,5 +1,6 @@
 version: 3
 parallel_apply: false
+automerge: true
 
 projects:
 - name: prod
@@ -7,7 +8,6 @@ projects:
   workspace: prod
   workflow: prod
   apply_requirements: [mergeable]
-  automerge: true
   autoplan:
     when_modified: ["*.tf", "*.tfvars"]
     enabled: true
@@ -16,7 +16,6 @@ projects:
   workspace: gqa
   workflow: prod
   apply_requirements: [mergeable]
-  automerge: true
   autoplan:
     when_modified: ["*.tf", "*.tfvars"]
     enabled: true
