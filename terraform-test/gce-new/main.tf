@@ -34,10 +34,6 @@ resource "google_compute_instance" "web_server" {
   network_interface {
     network    = var.vpc
     subnetwork = var.subnet
-    
-    access_config {
-      # Ephemeral public IP
-    }
   }
 
   service_account {
