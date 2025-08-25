@@ -32,7 +32,10 @@ jobs:
           ls -la
           echo "previous dir tree" 
           ls -la ../
+          echo "gcloud auth list" 
           gcloud auth list
+          echo "gcloud config list" 
+          gcloud config list
       # - name: Set up Python
       #   uses: actions/setup-python@v5
       #   with:
