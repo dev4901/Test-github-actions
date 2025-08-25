@@ -5,7 +5,7 @@ on:
     branches:
       - python-test
     paths:
-      - 'python_test.py'
+      - "python_test.py"
 
 jobs:
   add-label:
@@ -26,16 +26,22 @@ jobs:
           workload_identity_provider: "projects/1065920978070/locations/global/workloadIdentityPools/github-actions-pools/providers/github-actions-test"
           service_account: "github-actions-tf@cellular-motif-457805-t1.iam.gserviceaccount.com"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12.3"
-          cache: "pip"
-
-      - name: Install dependencies
+      - name: test dir listing
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          echo "curr dir tree" 
+          ls -l
+          echo "previous dir tree" 
+          ls -l ../
+      # - name: Set up Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.12.3"
+      #     cache: "pip"
 
-      - name: Run script
-        run: python3 python_test.py
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install -r requirements.txt
+
+      # - name: Run script
+      #   run: python3 python_test.py
