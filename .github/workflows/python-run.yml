@@ -29,9 +29,9 @@ jobs:
       - name: test dir listing
         run: |
           echo "curr dir tree" 
-          ls -l
+          ls -la
           echo "previous dir tree" 
-          ls -l ../
+          ls -la ../
       # - name: Set up Python
       #   uses: actions/setup-python@v5
       #   with:
