@@ -1,9 +1,9 @@
-from googleapiclient import discovery
-from oauth2client.client import GoogleCredentials
+from googleapiclient.discovery import build
+from google.auth import default
 
 # Auth
-credentials = GoogleCredentials.get_application_default()
-service = discovery.build('compute', 'v1', credentials=credentials)
+credentials, project_id = default()
+service = build('compute', 'v1', credentials=credentials)
 
 # Params
 project = "cellular-motif-457805-t1"
@@ -16,7 +16,7 @@ instance_resource = service.instances().get(
 
 # Labels
 labels = instance_resource.get('labels', {})
-labels['hello'] = 'world'
+labels['hello-gh-actions'] = 'this-new-label'
 
 # Set new labels
 req = service.instances().setLabels(
