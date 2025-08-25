@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - python-test
+    paths:
+      - ./python-test.py
 
 jobs:
   add-label:
