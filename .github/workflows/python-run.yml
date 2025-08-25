@@ -5,7 +5,7 @@ on:
     branches:
       - python-test
     paths:
-      - '../python-test.py'
+      - 'python-test.py'
 
 jobs:
   add-label:
