@@ -3,7 +3,7 @@ name: Add Label to GCE Instance
 on:
   push:
     branches:
-      - python-test
+      - python-test-feature
     # paths:
     #   - "python_test.py"
 
