@@ -16,7 +16,7 @@ instance_resource = service.instances().get(
 
 # Labels
 labels = instance_resource.get('labels', {})
-labels['hello-test2'] = 'this-new-label'
+labels['hello-test3'] = 'this-new-label'
 
 # Set new labels
 req = service.instances().setLabels(
